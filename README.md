@@ -1,14 +1,14 @@
 # Project 4
-- **Assigned: Monday October 28**
-- **Task 1 Due: Monday November 4, 11:59pm**
-- **Task 2 Due: Monday November 18, 11:59pm**
+- **Assigned: Monday March 17**
+- **Task 1 Due: Monday March 24, 2:00pm**
+- **Task 2 Due: Monday April 7, 2:00pm**
 
 Assigned by Marty Barrett
 Please direct questions to Piazza. Only email a TA or Marty if absolutely needed.
 
 **Three status notes:**
  - Like the other projects, you must do this project alone.
- - The updated information on how to deploy Task 2 to the cloud and how to submit Task 2 for grading has been added below.
+ - Information on how to deploy Task 2 to the cloud and how to submit Task 2 for grading has been added below.
   - The images have been re-labled to reflect using GitHub Codespaces.
 
 ## Project Topics: Mobile to Cloud application
@@ -50,8 +50,8 @@ f. A screenshot of the console output from section 2c.
 Do not submit your code. It will be integrated into Task 2.
 
 **Grading:**  
-- Task 1 complete and submitted on time: Bonus 5 points
-- Task 2 does not use the API demonstrated in Task 1:  Penalty 10 points
+- Task 1 complete and submitted on time: ***5 points Bonus***
+- Task 2 does ***not*** use the API demonstrated in Task 1:  ***10 points Penalty***
 
 If you don’t submit Task 1 on time, you get no bonus points.
 
@@ -62,7 +62,7 @@ If you do not use the API submitted in Task 1 on time, you still get the 5 bonus
 Grace days **cannot** be used for Task 1.  Grace days, if you have some remaining, can be used for Tasks 2.
 
 **Banned APIs:** There are a number of APIs that have been used too often and are no longer interesting in this class.  Therefore, you **cannot** use any of the following:
-- anything related to Project 1 (dogs, dog breeds, dog data, dog pictures)
+- anything related to Project 1 (U.S. National Parks, weather)
 - Agify.io
 - Alpha Vantage
 - Dog.ceo
@@ -108,9 +108,11 @@ In detail, your distributed application should satisfy the following requirement
 
 ### Distributed Application Requirements
 ##### 1.	Implement a native Android application
+
 a.	Has at least three different kinds of Views in your Layout (TextView, EditText, ImageView, or anything that extends android.view.View). **In order to figure out if something is a View, find its API.  If it extends android.view.View then it is a View.**  
 b.	Requires input from the user  
-c.	Makes an HTTP request (using an appropriate HTTP method) to your web service  
+c.	Makes an HTTP request (using an appropriate HTTP method) to your web service. Note that this request ***must*** be done using a background thread (see Lab 8's use of BackgroundTask)
+
 d.	Receives and parses an XML or JSON formatted reply from your web service  
 e.	Displays new information to the user  
 f.	Is repeatable (I.e. the user can repeatedly reuse the application without restarting it.)
@@ -119,11 +121,11 @@ f.	Is repeatable (I.e. the user can repeatedly reuse the application without res
 a.	Implement a simple (can be a single path) API.  
 b.	Receives an HTTP request from the native Android application  
 c.	Executes business logic appropriate to your application.  This includes fetching XML or JSON information from some 3rd party API and processing the response.
-- -10 if you use a banned API
-- -10 if screen scrape instead of fetching XML or JSON via a published API
+- -10 points if you use a banned API
+- -10 points if screen scrape instead of fetching XML or JSON via a published API
 
 d.	Replies to the Android application with an XML or JSON formatted response. The schema of the response can be of your own design.  
--	-5 if more information is returned to the Android app that is needed, forcing the mobile app to do more computing than is necessary. The web service should select and pass on only the information that the mobile app needs.
+-	-5 points if more information is returned to the Android app that is needed, forcing the mobile app to do more computing than is necessary. The web service should select and pass on only the information that the mobile app needs.
 
 **Use Servlets, not JAX-RS, for your web services.** Students have had issues deploying web applications built with JAX-RS to Docker Containers and a solution has not yet been found.
 
