@@ -1,3 +1,16 @@
+
+
 git add .
 git commit -m "update ROOT.war"
 git push 
+
+
+# update repository to codespace
+apt update && apt install git -y
+
+git config --global --add safe.directory /workspaces/ds_joke
+git pull origin main
+>Codespaces: Rebuild 
+
+
+catalina.sh run
